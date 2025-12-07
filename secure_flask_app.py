@@ -11,7 +11,7 @@ Features implemented:
 - Encryption of a sensitive field (phone) using Fernet
 - HTTPS (instructions below) and secure cookie settings via Flask config
 
-Run instructions (see README below in this file): install dependencies, initialize DB, run app.
+Run instructions see README file: install dependencies, initialize DB, run app.
 """
 
 from flask import Flask, g, render_template_string, request, redirect, url_for, session, abort, flash
@@ -367,6 +367,7 @@ if __name__ == '__main__':
         app.run(host='0.0.0.0', port=8443, ssl_context=(cert, key), debug=True)
     else:
         app.run(host='0.0.0.0', port=5000, debug=True)
+
 
 
 
