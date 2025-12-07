@@ -1,4 +1,16 @@
- Dependencies:
+This is a Simple Flask web application demonstrating five vulnerabilities and their fixes.
+- Vulnerable endpoints are suffixed with _vuln
+- Fixed endpoints are the default ones
+
+Features implemented:
+- User registration & login (vulnerable: SQL injection + MD5 password)
+- Fixed: parameterized queries + bcrypt
+- Comments that demonstrate XSS (vulnerable) and fixed with Bleach
+- Role-based access control (RBAC): vulnerable admin page and fixed decorator
+- Encryption of a sensitive field (phone) using Fernet
+- HTTPS (instructions below) and secure cookie settings via Flask config
+ 
+Dependencies:
 pip install flask bcrypt cryptography bleach flask-talisman
 
 Initialize DB:
