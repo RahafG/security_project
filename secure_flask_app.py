@@ -257,7 +257,7 @@ def view_comments_vuln():
         html += f"<p><strong>{r['username']}</strong>: {r['text']}</p>"
     return html
 
-# Fixed: sanitize output using Bleach (or rely on Jinja autoescape)
+# Fixed: sanitize output using Bleach 
 @app.route('/comments')
 def view_comments():
     db = get_db()
@@ -367,6 +367,7 @@ if __name__ == '__main__':
         app.run(host='0.0.0.0', port=8443, ssl_context=(cert, key), debug=True)
     else:
         app.run(host='0.0.0.0', port=5000, debug=True)
+
 
 
 
